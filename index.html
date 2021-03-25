@@ -6,6 +6,21 @@
 	<link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+	<div id="container">
 	<h2>Actividad 7</h2>
+	<h3>Seleccione la operación:</h3>
+	N1: <input type="number" name="n1" id="n1"><br>
+	N2: <input type="number" name="n2" id="n2"><br>
+	<br>
+	<select name="n3" id="n3">
+		<option value="1">Sumar</option>
+		<option value="2">Restar</option>
+		<option value="3">Multiplicar</option>
+	</select>
+	<button onclick="alert(math(document.getElementById('n1').value,document.getElementById('n2').value, document.getElementById('n3').value))">=</button>
+	</div>	
+	<script>
+		let math = (a,b,c) => c==1 ? parseInt(a)+parseInt(b) : c==2 ? a-b : a*b;
+	</script>
 </body>
 </html>
